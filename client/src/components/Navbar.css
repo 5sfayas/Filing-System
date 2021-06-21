@@ -1,0 +1,42 @@
+.header__nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;   /* this makes it to be at the top layer */
+
+	padding: 15px 25px;
+	background-color:#FBFEFF;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header__navLeft > h4 > a {
+	color: rgb(2, 2, 2);
+}
+.header__navRight {
+	display: flex;
+	align-items: center;
+}
+.header__navRight > h6 {
+	padding: 8px 20px !important;
+
+	transition: 0.1s ease-in-out;
+}
+.header__navRight > h6:hover {
+	transform: scale(1.02);
+	transition: 0.1s ease-in-out;
+}
+.header__navRight > h6 > a {
+	color: rgb(8, 8, 8);
+}
+
+.header__navRight > h6 > a:hover,
+.header__navLeft > h4 > a:hover {
+	text-decoration: none;
+}
+.border__add,
+.border__view,
+.border__order,
+.border__signUp {
+	padding: 8px 20px !important;
+}

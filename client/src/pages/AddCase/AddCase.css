@@ -1,0 +1,97 @@
+.addInventory {
+	padding: 100px;
+	outline: none;
+	height: 100%;
+	display: 'grid';
+	place-items: 'center';
+	/* border: 1px white solid; */
+	background-color: #d1eeffe0;
+}
+@media screen and (max-width: 768px) {
+	.addInventory {
+		height: 94vh;
+		padding-top: 150px;
+	}
+}
+.addInventory__section {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background-color: #2263B3; */
+	flex-direction: column;
+	/* width: fit-content; */
+}
+.addInventory__sectionInner {
+	display: flex;
+	border-radius: 10px !important;
+	flex-direction: column;
+	background-color: #fff;
+	align-items: center;
+	padding: 40px 50px;
+}
+.tabs {
+	/* border: 1px red solid; */
+	background-color: #fff;
+}
+.tabs > a:focus {
+	color: #2289f9 !important;
+}
+
+.tabs > a {
+	color: #707070 !important;
+}
+.tabs > a:first-child {
+	color: #2289f9 !important;
+}
+.tab__insert > a:first-child {
+	color: #707070 !important;
+}
+.tab {
+	/* border: 1px red solid; */
+	background-color: #fff;
+}
+.tab__buttonAction {
+	float: right;
+}
+.tab__details {
+	padding: 20px;
+}
+
+.tab__buttonAction > button {
+	color: white;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: 1px #2289f9 solid;
+	margin-left: 5px;
+	background-color: #2289f9;
+}
+.tab__buttonAction > button:hover {
+	background-color: white;
+	color: #2289f9;
+	border: 1px white solid;
+}
+.input__label {
+	width: 120px;
+}
+.form-control:focus {
+	border-color: #2289f9 !important;
+	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.075), 0 0 8px #10539b !important;
+}
+.Last_Hearing{
+	padding: 3px;
+	margin: 0px 10px 0px 10px;
+}
+.StatusSelect{
+	padding: 3px;
+	margin: 0px 6px 0px 6px;
+	width: 199px;
+}
+.StatusSelect select:focus{
+	border-color: #2289f9 !important;
+	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.075), 0 0 8px #10539b !important;
+}
+.Text{
+	margin: 0px 0px 0px 10px;
+	width: 199px;
+}
