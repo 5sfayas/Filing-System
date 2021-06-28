@@ -13,12 +13,20 @@ Use the cmd line to install dependencies.
 ```
 npm install
 ```
+## Docker Installation
+
+Use dockerfile to build the image 
+
+```
+docker built -t filingsystem:latest
+docker run -p 80:4000 filingsystem
+```
 
 ## Usage
 
 ```
 npm run build
-npm run dev
+npm run start
 ```
 
 ## Contributing
