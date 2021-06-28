@@ -5,7 +5,9 @@
   "main": "client/src/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js",
+    "prod-build": "webpack --config webpack.config.prod.js",
+    "prod": "node server/index.js"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",

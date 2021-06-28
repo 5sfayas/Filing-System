@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { mode } = require('./webpack.config');
 
 module.exports = {
-    entry: {
+    entry:{
         main: path.join(__dirname, 'client/src/index.js')
     },
-    output: {
+    output:{
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
     },
@@ -14,6 +15,8 @@ module.exports = {
         template: path.join(__dirname, 'client/templates/index.ejs'),
         filename: 'index.html'
     })],
+    mode:"production",
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -27,39 +30,20 @@ module.exports = {
                 }
             },
             {
-                test: /\.(html)$/,
-                use: {
-                    loader: 'html-loader',
-                    options: {
-                        attrs: [':data-src']
-                    }
-                }
-            },
-            {
-                test: /\.(png|jpg)$/,
-                include: path.join(__dirname, '/client/img'),
-                loader: 'file-loader'
-            },
-            {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
+            },
+            { 
+                test: /\.txt$/,
+                use: 'raw-loader' 
             }
         ]
-    },
-    devServer: {
-        contentBase: path.join(__dirname, 'build'),
-        compress: true,
-        proxy: {
-            '/api': 'http://localhost:4000'
-        }
     },
     resolve: {
         extensions: ["*", ".js", ".jsx"]
     },
     resolveLoader: {
         moduleExtensions: ["babel-loader"]
-    },
-    devtool: 'source-map',
-    mode: 'development',
-    node: { global: true, fs: 'empty', net: 'empty', tls: 'empty' }
-};
+    }
+
+}
